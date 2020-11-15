@@ -13,6 +13,9 @@ GET /login
     present login form
 POST /login
     create their session and redirect
+        1. tell them who their logged in as
+        2. You forgot a logout
+        3. create a protected page
 
 GET /pairs/new
     show a form to makea request of a pair
