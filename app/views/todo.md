@@ -14,6 +14,11 @@ GET /login
 POST /login
     create their session and redirect
         1. tell them who their logged in as
+
+
+        START HERE!
+
+        
         2. You forgot a logout
         3. create a protected page
 
