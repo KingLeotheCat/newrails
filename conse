@@ -231,4 +231,1800 @@ hash.
 
 
 (from gem bundler-2.1.4)
-=== IImmpplleemmeennttaattiioonn  ffrroomm 
+=== IImmpplleemmeennttaattiioonn  ffrroomm  PPrriissttiinnee
+------------------------------------------------------------------------
+  new(gems)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RReemmoovvee
+------------------------------------------------------------------------
+  new(gems, options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SShhooww
+------------------------------------------------------------------------
+  new(options, gem_name)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  UUppddaattee
+------------------------------------------------------------------------
+  new(options, gems)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  VViizz
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoommppaaccttIInnddeexxCClliieenntt
+------------------------------------------------------------------------
+  new(directory, fetcher)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCaacchhee
+------------------------------------------------------------------------
+  new(directory)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  UUppddaatteerr
+------------------------------------------------------------------------
+  new(fetcher)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMiissMMaattcchheeddCChheecckkssuummEErrrroorr
+------------------------------------------------------------------------
+  new(path, server_checksum, local_checksum)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonnnneeccttiioonnPPooooll
+------------------------------------------------------------------------
+  new(options = {}, &block)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  TTiimmeeddSSttaacckk
+------------------------------------------------------------------------
+  new(size = 0, &block)
+
+------------------------------------------------------------------------
+
+Creates a new pool with size connections that are created from the given
+block.
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  WWrraappppeerr
+------------------------------------------------------------------------
+  new(options = {}, &block)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDeeffiinniittiioonn
+------------------------------------------------------------------------
+  new(lockfile, dependencies, sources, unlock, ruby_version = nil, optional_groups = [], gemfiles = [])
+
+------------------------------------------------------------------------
+
+How does the new system work?
+
+* Load information from Gemfile and Lockfile
+* Invalidate stale locked specs
+* All specs from stale source are stale
+* All specs that are reachable only through a stale dependency are
+  stale.
+* If all fresh dependencies are satisfied by the locked
+  specs, then we can try to resolve locally.
+
+@param lockfile [Pathname] Path to Gemfile.lock @param dependencies
+[Array(Bundler::Dependency)] array of dependencies from Gemfile @param
+sources [Bundler::SourceList] @param unlock [Hash, Boolean, nil] Gems
+that have been requested
+  to be updated or true if all gems should be updated
+
+@param ruby_version [Bundler::RubyVersion, nil] Requested Ruby Version
+@param optional_groups [Array(String)] A list of optional groups
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDeeppPPrrooxxyy
+------------------------------------------------------------------------
+  new(dep, platform)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDeeppeennddeennccyy
+------------------------------------------------------------------------
+  new(name, version, options = {}, &blk)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDssll
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDSSLLEErrrroorr
+------------------------------------------------------------------------
+  new(description, dsl_path, backtrace, contents = nil)
+
+------------------------------------------------------------------------
+
+@param [Exception] backtrace @see backtrace @param [String]    dsl_path 
+@see dsl_path
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  EEnnddppooiinnttSSppeecciiffiiccaattiioonn
+------------------------------------------------------------------------
+  new(name, version, platform, dependencies, metadata = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  EEnnvviirroonnmmeennttPPrreesseerrvveerr
+------------------------------------------------------------------------
+  new(env, keys)
+
+------------------------------------------------------------------------
+
+@param env [ENV] @param keys [Array<String>]
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  FFeeaattuurreeFFllaagg
+------------------------------------------------------------------------
+  new(bundler_version)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  FFeettcchheerr
+------------------------------------------------------------------------
+  new(remote)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  AAuutthheennttiiccaattiioonnRReeqquuiirreeddEErrrroorr
+------------------------------------------------------------------------
+  new(remote_uri)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBaaddAAuutthheennttiiccaattiioonnEErrrroorr
+------------------------------------------------------------------------
+  new(remote_uri)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBaassee
+------------------------------------------------------------------------
+  new(downloader, remote, display_uri)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCeerrttiiffiiccaatteeFFaaiilluurreeEErrrroorr
+------------------------------------------------------------------------
+  new(remote_uri)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDoowwnnllooaaddeerr
+------------------------------------------------------------------------
+  new(connection, redirect_limit)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSSSLLEErrrroorr
+------------------------------------------------------------------------
+  new(msg = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeemmHHeellppeerr
+------------------------------------------------------------------------
+  new(base = nil, name = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeemmIInnssttaalllleerr
+------------------------------------------------------------------------
+  new(spec, installer, standalone = false, worker = 0, force = false)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeemmRReeqquuiirreeEErrrroorr
+------------------------------------------------------------------------
+  new(orig_exception, msg)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeemmVVeerrssiioonnPPrroommootteerr
+------------------------------------------------------------------------
+  new(locked_specs = SpecSet.new([]), unlock_gems = [])
+
+------------------------------------------------------------------------
+
+Given a list of locked_specs and a list of gems to unlock creates a
+GemVersionPromoter instance.
+
+@param locked_specs [SpecSet] All current locked specs. Unlike
+Definition
+  where this list is empty if all gems are being updated, this should
+  always be populated for all gems so this class can properly function.
+
+@param unlock_gems [String] List of gem names being unlocked. If empty,
+  all gems will be considered unlocked.
+
+@return [GemVersionPromoter]
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeemmddeeppss
+------------------------------------------------------------------------
+  new(runtime)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeenneerriiccSSyysstteemmCCaallllEErrrroorr
+------------------------------------------------------------------------
+  new(underlying_error, message)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGrraapphh
+------------------------------------------------------------------------
+  new(env, output_file, show_version = false, show_requirements = false, output_format = "png", without = [])
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGrraapphhVViizzCClliieenntt
+------------------------------------------------------------------------
+  new(graph_instance)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInnddeexx
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInnjjeeccttoorr
+------------------------------------------------------------------------
+  new(deps, options = {})
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInnssttaalllleerr
+------------------------------------------------------------------------
+  new(root, definition)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLaazzyySSppeecciiffiiccaattiioonn
+------------------------------------------------------------------------
+  new(name, version, platform, source = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLoocckkffiilleeGGeenneerraattoorr
+------------------------------------------------------------------------
+  new(definition)
+
+------------------------------------------------------------------------
+
+@private
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLoocckkffiilleePPaarrsseerr
+------------------------------------------------------------------------
+  new(lockfile)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMiirrrroorrSSoocckkeettss
+------------------------------------------------------------------------
+  new(mirror)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCiirrccuullaarrDDeeppeennddeennccyyEErrrroorr
+------------------------------------------------------------------------
+  new(vertices)
+
+------------------------------------------------------------------------
+
+Initializes a new error with the given circular vertices. @param
+[Array<DependencyGraph::Vertex>] vertices the vertices in the dependency
+  that caused the error
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDeeppeennddeennccyyGGrraapphh
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+Initializes an empty dependency graph
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  AAddddEEddggeeNNooCCiirrccuullaarr
+------------------------------------------------------------------------
+  new(origin, destination, requirement)
+
+------------------------------------------------------------------------
+
+Initialize an action to add an edge to a dependency graph @param
+[String] origin the name of the origin of the edge @param [String]
+destination the name of the destination of the edge @param [Object]
+requirement the requirement that the edge represents
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDeelleetteeEEddggee
+------------------------------------------------------------------------
+  new(origin_name, destination_name, requirement)
+
+------------------------------------------------------------------------
+
+Initialize an action to add an edge to a dependency graph @param
+[String] origin_name the name of the origin of the edge @param [String]
+destination_name the name of the destination of the edge @param [Object]
+requirement the requirement that the edge represents
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDeettaacchhVVeerrtteexxNNaammeedd
+------------------------------------------------------------------------
+  new(name)
+
+------------------------------------------------------------------------
+
+Initialize an action to detach a vertex from a dependency graph @param
+[String] name the name of the vertex to detach
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLoogg
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+Initializes an empty log
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  TTaagg
+------------------------------------------------------------------------
+  new(tag)
+
+------------------------------------------------------------------------
+
+Initialize an action to tag a state of a dependency graph @param
+[Object] tag an opaque tag
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  VVeerrtteexx
+------------------------------------------------------------------------
+  new(name, payload)
+
+------------------------------------------------------------------------
+
+Initializes a vertex with the given name and payload. @param [String]
+name see {#name} @param [Object] payload see {#payload}
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  NNooSSuucchhDDeeppeennddeennccyyEErrrroorr
+------------------------------------------------------------------------
+  new(dependency, required_by = [])
+
+------------------------------------------------------------------------
+
+Initializes a new error with the given missing dependency. @param
+[Object] dependency @see {#dependency} @param [Array<Object>]
+required_by @see {#required_by}
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RReessoollvveerr
+------------------------------------------------------------------------
+  new(specification_provider, resolver_ui)
+
+------------------------------------------------------------------------
+
+Initializes a new resolver. @param  [SpecificationProvider]
+specification_provider
+  see {#specification_provider}
+
+@param  [UI] resolver_ui
+  see {#resolver_ui}
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RReessoolluuttiioonn
+------------------------------------------------------------------------
+  new(specification_provider, resolver_ui, requested, base)
+
+------------------------------------------------------------------------
+
+Initializes a new resolution. @param [SpecificationProvider]
+specification_provider
+  see {#specification_provider}
+
+@param [UI] resolver_ui see {#resolver_ui} @param [Array] requested see
+{#original_requested} @param [DependencyGraph] base see {#base}
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  VVeerrssiioonnCCoonnfflliicctt
+------------------------------------------------------------------------
+  new(conflicts, specification_provider)
+
+------------------------------------------------------------------------
+
+Initializes a new error with the given version conflicts. @param
+[{String => Resolution::Conflict}] conflicts see {#conflicts} @param
+[SpecificationProvider] specification_provider see
+{#specification_provider}
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  PPaarraalllleellIInnssttaalllleerr
+------------------------------------------------------------------------
+  new(installer, all_specs, size, standalone, force)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSppeeccIInnssttaallllaattiioonn
+------------------------------------------------------------------------
+  new(spec)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  PPeerrmmiissssiioonnEErrrroorr
+------------------------------------------------------------------------
+  new(path, permission_type = :write)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  PPeerrssiisstteenntt
+------------------------------------------------------------------------
+  new(name: nil, proxy: nil, pool_size: DEFAULT_POOL_SIZE)
+
+------------------------------------------------------------------------
+
+Creates a new Bundler::Persistent::Net::HTTP::Persistent.
+
+Set name to keep your connections apart from everybody else's.  Not
+required currently, but highly recommended.  Your library name should be
+good enough.  This parameter will be required in a future version.
+
+proxy may be set to a Bundler::URI::HTTP or :ENV to pick up proxy
+options from the environment.  See proxy_from_env for details.
+
+In order to use a Bundler::URI for the proxy you may need to do some
+extra work beyond Bundler::URI parsing if the proxy requires a password:
+
+  proxy = Bundler::URI 'http://proxy.example'
+  proxy.user     = 'AzureDiamond'
+  proxy.password = 'hunter2'
+
+Set pool_size to limit the maximum number of connections allowed.
+Defaults to 1/4 the number of allowed file handles.  You can have no
+more than this many threads with active HTTP transactions.
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSoouurrccee
+------------------------------------------------------------------------
+  new(opts)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDSSLL
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  BBuunnddlleerr::::DDssll::::nneeww))
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInnddeexx
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoommmmaannddCCoonnfflliicctt
+------------------------------------------------------------------------
+  new(plugin, commands)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSoouurrcceeCCoonnfflliicctt
+------------------------------------------------------------------------
+  new(plugin, sources)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RReemmootteeSSppeecciiffiiccaattiioonn
+------------------------------------------------------------------------
+  new(name, version, platform, spec_fetcher)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RReessoollvveerr
+------------------------------------------------------------------------
+  new(index, source_requirements, base, gem_version_promoter, additional_base_requirements, platforms)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSppeeccGGrroouupp
+------------------------------------------------------------------------
+  new(all_specs)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RReettrryy
+------------------------------------------------------------------------
+  new(name, exceptions = nil, retries = self.class.default_retries)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RRuubbyyVVeerrssiioonn
+------------------------------------------------------------------------
+  new(versions, patchlevel, engine, engine_version)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RRuubbyyggeemmssIInntteeggrraattiioonn
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RRuunnttiimmee
+------------------------------------------------------------------------
+  new(root, definition)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSeettttiinnggss
+------------------------------------------------------------------------
+  new(root = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMiirrrroorr
+------------------------------------------------------------------------
+  new(uri = nil, fallback_timeout = 0)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMiirrrroorrCCoonnffiigg
+------------------------------------------------------------------------
+  new(config_line, value)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMiirrrroorrss
+------------------------------------------------------------------------
+  new(prober = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RRuullee
+------------------------------------------------------------------------
+  new(keys, description, &validate)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSiimmiillaarriittyyDDeetteeccttoorr
+------------------------------------------------------------------------
+  new(corpus)
+
+------------------------------------------------------------------------
+
+initialize with an array of words to be matched against
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSoocckkeettAAddddrreessss
+------------------------------------------------------------------------
+  new(type, host, port)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeemmssppeecc
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGiitt
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGiittCCoommmmaannddEErrrroorr
+------------------------------------------------------------------------
+  new(command, path = nil, extra_info = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGiittNNoottAAlllloowweeddEErrrroorr
+------------------------------------------------------------------------
+  new(command)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGiittNNoottIInnssttaalllleeddEErrrroorr
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGiittPPrrooxxyy
+------------------------------------------------------------------------
+  new(path, uri, ref, revision = nil, git = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMiissssiinnggGGiittRReevviissiioonnEErrrroorr
+------------------------------------------------------------------------
+  new(command, path, ref, repo)
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  BBuunnddlleerr::::SSoouurrccee::::GGiitt::::GGiittCCoommmmaannddEErrrroorr::::nneeww))
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  PPaatthh
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInnssttaalllleerr
+------------------------------------------------------------------------
+  new(spec, options = {})
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RRuubbyyggeemmss
+------------------------------------------------------------------------
+  new(options = {})
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RReemmoottee
+------------------------------------------------------------------------
+  new(uri)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSoouurrcceeLLiisstt
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSppeeccSSeett
+------------------------------------------------------------------------
+  new(specs)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSttaannddaalloonnee
+------------------------------------------------------------------------
+  new(groups, definition)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  AAccttiioonnss
+------------------------------------------------------------------------
+  new(args = [], options = {}, config = {})
+
+------------------------------------------------------------------------
+
+Extends initializer to add more configuration options.
+
+==== CCoonnffiigguurraattiioonn
+behavior<Symbol>:
+  The actions default behavior. Can be :invoke or :revoke. It also
+  accepts :force, :skip and :pretend to set the behavior and the
+  respective option.
+
+
+destination_root<String>:
+  The root directory needed for some actions.
+
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBaassee
+------------------------------------------------------------------------
+  new(args = [], local_options = {}, config = {})
+
+------------------------------------------------------------------------
+
+It receives arguments in an Array and two hashes, one for options and
+other for configuration.
+
+Notice that it does not check if all required arguments were supplied.
+It should be done by the parser.
+
+==== PPaarraammeetteerrss
+args<Array[Object]>:
+  An array of objects. The objects are applied to their respective
+  accessors declared with argument.
+
+
+options<Hash>:
+  An options hash that will be available as self.options. The hash given
+  is converted to a hash with indifferent access, magic predicates
+  (options.skip?) and then frozen.
+
+
+config<Hash>:
+  Configuration for this Bundler::Thor class.
+
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoommmmaanndd
+------------------------------------------------------------------------
+  new(name, description, long_description, usage, options = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDyynnaammiiccCCoommmmaanndd
+------------------------------------------------------------------------
+  new(name, options = nil)
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  BBuunnddlleerr::::TThhoorr::::CCoommmmaanndd::::nneeww))
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDyynnaammiiccCCoommmmaanndd
+------------------------------------------------------------------------
+  new(name, options = nil)
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  BBuunnddlleerr::::TThhoorr::::CCoommmmaanndd::::nneeww))
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBaassiicc
+------------------------------------------------------------------------
+  new(prompt, options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  PPaatthhCCoommpplleettiioonn
+------------------------------------------------------------------------
+  new(text)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  NNeesstteeddCCoonntteexxtt
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SShheellll
+------------------------------------------------------------------------
+  new(args = [], options = {}, config = {})
+
+------------------------------------------------------------------------
+
+Add shell to initialize config values.
+
+==== CCoonnffiigguurraattiioonn
+shell<Object>:
+  An instance of the shell to be used.
+
+
+==== EExxaammpplleess
+
+  class MyScript < Bundler::Thor
+    argument :first, :type => :numeric
+  end
+
+  MyScript.new [1.0], { :foo => :bar }, :shell => Bundler::Thor::Shell::Basic.new
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoommmmaanndd
+------------------------------------------------------------------------
+  new(name, description, long_description, usage, options = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RRGGPPrrooxxyy
+------------------------------------------------------------------------
+  new(ui)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SShheellll
+------------------------------------------------------------------------
+  new(options = {})
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSiilleenntt
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  FFTTPP
+------------------------------------------------------------------------
+  new(scheme, userinfo, host, port, registry, path, opaque, query, fragment, parser = nil, arg_check = false)
+
+------------------------------------------------------------------------
+
+== DDeessccrriippttiioonn
+
+Creates a new Bundler::URI::FTP object from generic URL components with
+no syntax checking.
+
+Unlike build(), this method does not escape the path component as
+required by RFC1738; instead it is treated as per RFC2396.
+
+Arguments are scheme, userinfo, host, port, registry, path, opaque,
+query, and fragment, in that order.
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeenneerriicc
+------------------------------------------------------------------------
+  new(scheme, userinfo, host, port, registry, path, opaque, query, fragment, parser = DEFAULT_PARSER, arg_check = false)
+
+------------------------------------------------------------------------
+
+== AArrggss
+
+scheme:
+  Protocol scheme, i.e. 'http','ftp','mailto' and so on.
+
+userinfo:
+  User name and password, i.e. 'sdmitry:bla'.
+
+host:
+  Server host name.
+
+port:
+  Server port.
+
+registry:
+  Registry of naming authorities.
+
+path:
+  Path on server.
+
+opaque:
+  Opaque part.
+
+query:
+  Query data.
+
+fragment:
+  Part of the Bundler::URI after '#' character.
+
+parser:
+  Parser for internal use [Bundler::URI::DEFAULT_PARSER by default].
+
+arg_check:
+  Check arguments [false by default].
+
+
+== DDeessccrriippttiioonn
+
+Creates a new Bundler::URI::Generic instance from ``generic'' components
+without check.
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLDDAAPP
+------------------------------------------------------------------------
+  new(*arg)
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  BBuunnddlleerr::::UURRII::::GGeenneerriicc::::nneeww))
+------------------------------------------------------------------------
+
+== DDeessccrriippttiioonn
+
+Creates a new Bundler::URI::LDAP object from generic Bundler::URI
+components as per RFC 2396. No LDAP-specific syntax checking is
+performed.
+
+Arguments are scheme, userinfo, host, port, registry, path, opaque,
+query, and fragment, in that order.
+
+Example:
+
+  uri = Bundler::URI::LDAP.new("ldap", nil, "ldap.example.com", nil, nil,
+    "/dc=example;dc=com", nil, "query", nil)
+
+See also Bundler::URI::Generic.new.
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMaaiillTToo
+------------------------------------------------------------------------
+  new(*arg)
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  BBuunnddlleerr::::UURRII::::GGeenneerriicc::::nneeww))
+------------------------------------------------------------------------
+
+== DDeessccrriippttiioonn
+
+Creates a new Bundler::URI::MailTo object from generic URL components
+with no syntax checking.
+
+This method is usually called from Bundler::URI::parse, which checks the
+validity of each component.
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RRFFCC22339966__PPaarrsseerr
+------------------------------------------------------------------------
+  new(opts = {})
+
+------------------------------------------------------------------------
+
+== SSyynnooppssiiss
+
+  Bundler::URI::Parser.new([opts])
+
+== AArrggss
+
+The constructor accepts a hash as options for parser. Keys of options
+are pattern names of Bundler::URI components and values of options are
+pattern strings. The constructor generates set of regexps for parsing
+URIs.
+
+You can use the following keys:
+
+  * :ESCAPED (Bundler::URI::PATTERN::ESCAPED in default)
+  * :UNRESERVED (Bundler::URI::PATTERN::UNRESERVED in default)
+  * :DOMLABEL (Bundler::URI::PATTERN::DOMLABEL in default)
+  * :TOPLABEL (Bundler::URI::PATTERN::TOPLABEL in default)
+  * :HOSTNAME (Bundler::URI::PATTERN::HOSTNAME in default)
+
+== EExxaammpplleess
+
+  p = Bundler::URI::Parser.new(:ESCAPED => "(?:%[a-fA-F0-9]{2}|%u[a-fA-F0-9]{4})")
+  u = p.parse("http://example.jp/%uABCD") #=> #<Bundler::URI::HTTP http://example.jp/%uABCD>
+  Bundler::URI.parse(u.to_s) #=> raises Bundler::URI::InvalidURIError
+
+  s = "http://example.com/ABCD"
+  u1 = p.parse(s) #=> #<Bundler::URI::HTTP http://example.com/ABCD>
+  u2 = Bundler::URI.parse(s) #=> #<Bundler::URI::HTTP http://example.com/ABCD>
+  u1 == u2 #=> true
+  u1.eql?(u2) #=> false
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RRFFCC22339966__PPaarrsseerr
+------------------------------------------------------------------------
+  new(opts = {})
+
+------------------------------------------------------------------------
+
+== SSyynnooppssiiss
+
+  Bundler::URI::Parser.new([opts])
+
+== AArrggss
+
+The constructor accepts a hash as options for parser. Keys of options
+are pattern names of Bundler::URI components and values of options are
+pattern strings. The constructor generates set of regexps for parsing
+URIs.
+
+You can use the following keys:
+
+  * :ESCAPED (Bundler::URI::PATTERN::ESCAPED in default)
+  * :UNRESERVED (Bundler::URI::PATTERN::UNRESERVED in default)
+  * :DOMLABEL (Bundler::URI::PATTERN::DOMLABEL in default)
+  * :TOPLABEL (Bundler::URI::PATTERN::TOPLABEL in default)
+  * :HOSTNAME (Bundler::URI::PATTERN::HOSTNAME in default)
+
+== EExxaammpplleess
+
+  p = Bundler::URI::Parser.new(:ESCAPED => "(?:%[a-fA-F0-9]{2}|%u[a-fA-F0-9]{4})")
+  u = p.parse("http://example.jp/%uABCD") #=> #<Bundler::URI::HTTP http://example.jp/%uABCD>
+  Bundler::URI.parse(u.to_s) #=> raises Bundler::URI::InvalidURIError
+
+  s = "http://example.com/ABCD"
+  u1 = p.parse(s) #=> #<Bundler::URI::HTTP http://example.com/ABCD>
+  u2 = Bundler::URI.parse(s) #=> #<Bundler::URI::HTTP http://example.com/ABCD>
+  u1 == u2 #=> true
+  u1.eql?(u2) #=> false
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  VVeerrssiioonnCCoonnfflliicctt
+------------------------------------------------------------------------
+  new(conflicts, msg = nil)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  WWoorrkkeerr
+------------------------------------------------------------------------
+  new(size, name, func)
+
+------------------------------------------------------------------------
+
+Creates a worker pool of specified size
+
+@param size [Integer] Size of pool @param name [String] name the name of
+the worker @param func [Proc] job to run in inside the worker pool
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  WWrraappppeeddEExxcceeppttiioonn
+------------------------------------------------------------------------
+  new(exn)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  YYaammllSSyynnttaaxxEErrrroorr
+------------------------------------------------------------------------
+  new(orig_exception, msg)
+
+------------------------------------------------------------------------
+
+
+(from gem crass-1.0.6)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  PPaarrsseerr
+------------------------------------------------------------------------
+  new(input, options = {})
+
+------------------------------------------------------------------------
+
+Initializes a parser based on the given _i_n_p_u_t, which may be a
+CSS string or an array of tokens.
+
+See {Tokenizer#initialize} for _o_p_t_i_o_n_s.
+
+
+(from gem crass-1.0.6)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSccaannnneerr
+------------------------------------------------------------------------
+  new(input)
+
+------------------------------------------------------------------------
+
+Creates a Scanner instance for the given _i_n_p_u_t string or IO
+instance.
+
+
+(from gem crass-1.0.6)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  TTookkeennSSccaannnneerr
+------------------------------------------------------------------------
+  new(tokens)
+
+------------------------------------------------------------------------
+
+
+(from gem crass-1.0.6)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  TTookkeenniizzeerr
+------------------------------------------------------------------------
+  new(input, options = {})
+
+------------------------------------------------------------------------
+
+Initializes a new Tokenizer.
+
+Options:
+
+  * **:preserve_comments** - If `true`, comments will be preserved as
+    `:comment` tokens.
+
+  * **:preserve_hacks** - If `true`, certain non-standard browser hacks
+    such as the IE "*" hack will be preserved even though they violate
+    CSS 3 syntax rules.
+
+
+(from gem erubi-1.9.0)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCaappttuurreeEEnnddEEnnggiinnee
+------------------------------------------------------------------------
+  new(input, properties={})
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  EErruubbii::::EEnnggiinnee::::nneeww))
+------------------------------------------------------------------------
+
+Initializes the engine.  Accepts the same arguments as ::Erubi::Engine,
+and these additional options:
+:escape_capture:
+  Whether to make <%|= escape by default, and <%|== not escape by
+  default, defaults to the same value as :escape.
+
+:yield_returns_buffer:
+  Whether to have <%| tags insert the buffer as an expression, so that
+  <%| end %> tags will have the buffer be the last expression inside the
+  block, and therefore have the buffer be returned by the yield
+  expression.  Normally the buffer will be returned anyway, but there
+  are cases where the last expression will not be the buffer, and
+  therefore a different object will be returned.
+
+
+
+(from gem erubi-1.9.0)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  EEnnggiinnee
+------------------------------------------------------------------------
+  new(input, properties={})
+
+------------------------------------------------------------------------
+
+Initialize a new Erubi::Engine.  Options:
+:bufval:
+  The value to use for the buffer variable, as a string.
+
+:bufvar:
+  The variable name to use for the buffer variable, as a string (default
+  '::String.new')
+
+:ensure:
+  Wrap the template in a begin/ensure block restoring the previous value
+  of bufvar.
+
+:escapefunc:
+  The function to use for escaping, as a string (default: '::Erubi.h').
+
+:escape:
+  Whether to make <%= escape by default, and <%== not escape by default.
+
+:escape_html:
+  Same as :escape, with lower priority.
+
+:filename:
+  The filename for the template.
+
+:freeze:
+  Whether to enable frozen string literals in the resulting source code.
+
+:outvar:
+  Same as bufvar, with lower priority.
+
+:postamble:
+  The postamble for the template, by default returns the resulting
+  source code.
+
+:preamble:
+  The preamble for the template, by default initializes up the buffer
+  variable.
+
+:regexp:
+  The regexp to use for scanning.
+
+:src:
+  The initial value to use for the source code
+
+:trim:
+  Whether to trim leading and trailing whitespace, true by default.
+
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  AAuuttooPPooiinntteerr
+------------------------------------------------------------------------
+  new(ptr, proc=nil, &block)
+
+------------------------------------------------------------------------
+
+@overload initialize(pointer, method)
+  @param pointer [Pointer]
+  @param method [Method]
+  @return [self]
+  The passed Method will be invoked at GC time.
+
+@overload initialize(pointer, proc)
+  @param pointer [Pointer]
+  @return [self]
+  The passed Proc will be invoked at GC time (SEE WARNING BELOW!)
+  @note WARNING: passing a proc _may_ cause your pointer to never be
+    GC'd, unless you're careful to avoid trapping a reference to the
+    pointer in the proc. See the test specs for examples.
+
+@overload initialize(pointer) { |p| ... }
+  @param pointer [Pointer]
+  @yieldparam [Pointer] p +pointer+ passed to the block
+  @return [self]
+  The passed block will be invoked at GC time.
+  @note
+    WARNING: passing a block will cause your pointer to never be GC'd.
+    This is bad.
+
+@overload initialize(pointer)
+  @param pointer [Pointer]
+  @return [self]
+  The pointer's release() class method will be invoked at GC time.
+
+@note The safest, and therefore preferred, calling
+  idiom is to pass a Method as the second parameter. Example usage:
+
+   class PointerHelper
+     def self.release(pointer)
+       ...
+     end
+   end
+
+   p = AutoPointer.new(other_pointer, PointerHelper.method(:release))
+
+  The above code will cause PointerHelper#release to be invoked at GC time.
+
+@note
+  The last calling idiom (only one parameter) is generally only
+  going to be useful if you subclass {AutoPointer}, and override
+  #release, which by default does nothing.
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  RReelleeaasseerr
+------------------------------------------------------------------------
+  new(ptr, proc)
+
+------------------------------------------------------------------------
+
+@param [Pointer] ptr @param [#call] proc @return [nil] A new instance of
+Releaser.
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBiittmmaasskk
+------------------------------------------------------------------------
+  new(*args)
+
+------------------------------------------------------------------------
+
+@overload initialize(info, tag=nil)
+  @param [nil, Enumerable] info symbols and bit rank for new Bitmask
+  @param [nil, Symbol] tag name of new Bitmask
+
+@overload initialize(native_type, info, tag=nil)
+  @param [FFI::Type] native_type Native type for new Bitmask
+  @param [nil, Enumerable] info symbols and bit rank for new Bitmask
+  @param [nil, Symbol] tag name of new Bitmask
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonnssttGGeenneerraattoorr
+------------------------------------------------------------------------
+  new(prefix = nil, options = {}) { |self| ... }
+
+------------------------------------------------------------------------
+
+Creates a new constant generator that uses prefix as a name, and an
+options hash.
+
+The only option is :required, which if set to true raises an error if a
+constant you have requested was not found.
+
+@param [#to_s] prefix @param [Hash] options @return @option options
+[Boolean] :required @overload initialize(prefix, options) @overload
+initialize(prefix, options) { |gen| ... }
+  @yieldparam [ConstGenerator] gen new generator is passed to the block
+  When passed a block, {#calculate} is automatically called at the end of
+  the block, otherwise you must call it yourself.
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonnssttaanntt
+------------------------------------------------------------------------
+  new(name, format, cast, ruby_name = nil, converter=nil)
+
+------------------------------------------------------------------------
+
+@param [#to_s] name @param [String] format a printf format string to
+print the value out @param [String] cast a C cast for the value @param
+ruby_name alternate ruby name for {#to_ruby} @param [#call] converter
+convert the value from a string to the appropriate
+  type for {#to_ruby}.
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  EEnnuumm
+------------------------------------------------------------------------
+  new(*args)
+
+------------------------------------------------------------------------
+
+@overload initialize(info, tag=nil)
+  @param [nil, Enumerable] info
+  @param [nil, Symbol] tag enum tag
+
+@overload initialize(native_type, info, tag=nil)
+  @param [FFI::Type] native_type Native type for new Enum
+  @param [nil, Enumerable] info symbols and values for new Enum
+  @param [nil, Symbol] tag name of new Enum
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  EEnnuummss
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+@return [nil]
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeenneerraattoorr
+------------------------------------------------------------------------
+  new(ffi_name, rb_name, options = {})
+
+------------------------------------------------------------------------
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  TTaasskk
+------------------------------------------------------------------------
+  new(rb_names, options={})
+
+------------------------------------------------------------------------
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMaannaaggeeddSSttrruucctt
+------------------------------------------------------------------------
+  new(pointer=nil)
+
+------------------------------------------------------------------------
+
+@overload initialize(pointer)
+  @param [Pointer] pointer
+  Create a new ManagedStruct which will invoke the class method #release on 
+
+@overload initialize A new instance of FFI::ManagedStruct.
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  NNoottFFoouunnddEErrrroorr
+------------------------------------------------------------------------
+  new(function, *libraries)
+
+------------------------------------------------------------------------
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMaannaaggeeddSSttrruuccttCCoonnvveerrtteerr
+------------------------------------------------------------------------
+  new(struct_class)
+
+------------------------------------------------------------------------
+
+@param [Struct] struct_class
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSttrruuccttBByyRReeffeerreennccee
+------------------------------------------------------------------------
+  new(struct_class)
+
+------------------------------------------------------------------------
+
+@param [Struct] struct_class
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSttrruuccttGGeenneerraattoorr
+------------------------------------------------------------------------
+  new(name, options = {}) { |self| ... }
+
+------------------------------------------------------------------------
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  FFiieelldd
+------------------------------------------------------------------------
+  new(name, type)
+
+------------------------------------------------------------------------
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMaappppeedd
+------------------------------------------------------------------------
+  new(name, offset, type, orig_field)
+
+------------------------------------------------------------------------
+
+
+(from gem ffi-1.13.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSttrruuccttLLaayyoouuttBBuuiillddeerr
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem globalid-0.4.2)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGlloobbaallIIDD
+------------------------------------------------------------------------
+  new(gid, options = {})
+
+------------------------------------------------------------------------
+
+
+(from gem globalid-0.4.2)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBlloocckkLLooccaattoorr
+------------------------------------------------------------------------
+  new(block)
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMaaiill
+------------------------------------------------------------------------
+  new(*args, &block)
+
+------------------------------------------------------------------------
+
+Allows you to create a new Mail::Message object.
+
+You can make an email via passing a string or passing a block.
+
+For example, the following two examples will create the same email
+message:
+
+Creating via a string:
+
+  string = "To: mikel@test.lindsaar.net\r\n"
+  string << "From: bob@test.lindsaar.net\r\n"
+  string << "Subject: This is an email\r\n"
+  string << "\r\n"
+  string << "This is the body"
+  Mail.new(string)
+
+Or creating via a block:
+
+  message = Mail.new do
+    to 'mikel@test.lindsaar.net'
+    from 'bob@test.lindsaar.net'
+    subject 'This is an email'
+    body 'This is the body'
+  end
+
+Or creating via a hash (or hash like object):
+
+  message = Mail.new({:to => 'mikel@test.lindsaar.net',
+                      'from' => 'bob@test.lindsaar.net',
+                      :subject => 'This is an email',
+                      :body => 'This is the body' })
+
+Note, the hash keys can be strings or symbols, the passed in object does
+not need to be a hash, it just needs to respond to :each_pair and yield
+each key value pair.
+
+As a side note, you can also create a new email through creating a
+Mail::Message object directly and then passing in values via string,
+symbol or direct method calls.  See Mail::Message for more information.
+
+  mail = Mail.new
+  mail.to = 'mikel@test.lindsaar.net'
+  mail[:from] = 'bob@test.lindsaar.net'
+  mail['subject'] = 'This is an email'
+  mail.body = 'This is the body'
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  AAddddrreessss
+------------------------------------------------------------------------
+  new(value = nil)
+
+------------------------------------------------------------------------
+
+Mail::Address handles all email addresses in Mail.  It takes an email
+address string and parses it, breaking it down into its component parts
+and allowing you to get the address, comments, display name, name, local
+part, domain part and fully formatted address.
+
+Mail::Address requires a correctly formatted email address per RFC2822
+or RFC822.  It handles all obsolete versions including obsolete domain
+routing on the local part.
+
+  a = Address.new('Mikel Lindsaar (My email address) <mikel@test.lindsaar.net>')
+  a.format       #=> 'Mikel Lindsaar <mikel@test.lindsaar.net> (My email address)'
+  a.address      #=> 'mikel@test.lindsaar.net'
+  a.display_name #=> 'Mikel Lindsaar'
+  a.local        #=> 'mikel'
+  a.domain       #=> 'test.lindsaar.net'
+  a.comments     #=> ['My email address']
+  a.to_s         #=> 'Mikel Lindsaar <mikel@test.lindsaar.net> (My email address)'
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  AAddddrreessssCCoonnttaaiinneerr
+------------------------------------------------------------------------
+  new(field, list = [])
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  AAttttaacchhmmeennttssLLiisstt
+------------------------------------------------------------------------
+  new(parts_list)
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBccccFFiieelldd
+------------------------------------------------------------------------
+  new(value = nil, charset = 'utf-8')
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBooddyy
+------------------------------------------------------------------------
+  new(string = '')
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCccFFiieelldd
+------------------------------------------------------------------------
+  new(value = nil, charset = 'utf-8')
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoommmmeennttssFFiieelldd
+------------------------------------------------------------------------
+  new(value = nil, charset = 'utf-8')
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonnffiigguurraattiioonn
+------------------------------------------------------------------------
+  new()
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonntteennttDDeessccrriippttiioonnFFiieelldd
+------------------------------------------------------------------------
+  new(value = nil, charset = 'utf-8')
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonntteennttDDiissppoossiittiioonnFFiieelldd
+------------------------------------------------------------------------
+  new(value = nil, charset = 'utf-8')
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonntteennttIIddFFiieelldd
+------------------------------------------------------------------------
+  new(value = nil, charset = 'utf-8')
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonntteennttLLooccaattiioonnFFiieelldd
+------------------------------------------------------------------------
+  new(value = nil, charset = 'utf-8')
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonntteennttTTrraannssffeerrEEnnccooddiinnggEElleemmeenntt
+------------------------------------------------------------------------
+  new(string)
+
+------------------------------------------------------------------------
+
+
+(from gem mail-2.7.1)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  C
