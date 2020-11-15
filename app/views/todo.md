@@ -7,6 +7,8 @@ POST /users
     create the user in database, maybe
     validation
 
+    --------------
+
 GET /login
     present login form
 POST /login
