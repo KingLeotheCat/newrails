@@ -1,0 +1,234 @@
+= ..nneeww
+
+(from gem builder-3.2.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  XXmmllBBaassee
+------------------------------------------------------------------------
+  new(indent=0, initial=0, encoding='utf-8')
+
+------------------------------------------------------------------------
+
+Create an XML markup builder.
+
+out:
+  Object receiving the markup.  out must respond to <<.
+
+indent:
+  Number of spaces used for indentation (0 implies no indentation and no
+  line breaks).
+
+initial:
+  Level of initial indentation.
+
+encoding:
+  When encoding and $KCODE are set to 'utf-8' characters aren't
+  converted to character entities in the output stream.
+
+
+
+(from gem builder-3.2.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  XXmmllMMaarrkkuupp
+------------------------------------------------------------------------
+  new(options={})
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  BBuuiillddeerr::::XXmmllBBaassee::::nneeww))
+------------------------------------------------------------------------
+
+Create an XML markup builder.  Parameters are specified by an option
+hash.
+
+:target => _t_a_r_g_e_t___o_b_j_e_c_t:
+  Object receiving the markup.  target_object must respond to the
+  <<(_a___s_t_r_i_n_g) operator and return itself.  The default
+  target is a plain string target.
+
+
+:indent => _i_n_d_e_n_t_a_t_i_o_n:
+  Number of spaces used for indentation.  The default is no indentation
+  and no line breaks.
+
+
+:margin => _i_n_i_t_i_a_l___i_n_d_e_n_t_a_t_i_o_n___l_e_v_e_l:
+  Amount of initial indentation (specified in levels, not spaces).
+
+
+:quote => _:_s_i_n_g_l_e:
+  Use single quotes for attributes rather than double quotes.
+
+
+:escape_attrs => _O_B_S_O_L_E_T_E:
+  The :escape_attrs option is no longer supported by builder (and will
+  be quietly ignored).  String attribute values are now automatically
+  escaped.  If you need unescaped attribute values (perhaps you are
+  using entities in the attribute values), then give the value as a
+  Symbol.  This allows much finer control over escaping attribute
+  values.
+
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCLLII
+------------------------------------------------------------------------
+  new(*args)
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  BBuunnddlleerr::::TThhoorr::::AAccttiioonnss::::nneeww))
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  AAdddd
+------------------------------------------------------------------------
+  new(options, gems)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBiinnssttuubbss
+------------------------------------------------------------------------
+  new(options, gems)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCaacchhee
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CChheecckk
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CClleeaann
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBaassee
+------------------------------------------------------------------------
+  new(options, name, value, thor)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCoonnssoollee
+------------------------------------------------------------------------
+  new(options, group)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  DDooccttoorr
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  EExxeecc
+------------------------------------------------------------------------
+  new(options, args)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeemm
+------------------------------------------------------------------------
+  new(options, gem_name, thor)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInnffoo
+------------------------------------------------------------------------
+  new(options, gem_name)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInniitt
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInnjjeecctt
+------------------------------------------------------------------------
+  new(options, name, version)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  IInnssttaallll
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLiisstt
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLoocckk
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  OOppeenn
+------------------------------------------------------------------------
+  new(options, name)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  OOuuttddaatteedd
+------------------------------------------------------------------------
+  new(options, gems)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  PPllaattffoorrmm
+------------------------------------------------------------------------
+  new(options)
+
+------------------------------------------------------------------------
+
+
+(from gem bundler-2.1.4)
+=== IImmpplleemmeennttaattiioonn  ffrroomm 
