@@ -10,9 +10,9 @@
   </head>
 
   <body>
-    <% if session[:current_user_id] %>
+    <% if logged_in? %>
       <nav>
-        You are logged in as: <%= @current_user.email %>
+        You are logged in as: <%= current_user.email %>
         | <a href="/logout">Logout</a>
       </nav>
       <% end %>
