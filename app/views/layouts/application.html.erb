@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Newrails</title>
+    <title>FindAPair</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,12 +10,24 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-      <nav>
-        You are logged in as: <%= current_user.email %>
-        | <a href="/logout">Logout</a>
-      </nav>
-      <% end %>
+    
+    <nav>
+      <section>
+        <%= link_to_unless_current "Home", root_path %> | 
+        <%= link_to_unless_current "Open Pairs", pairs_path %> |
+        <%= link_to_unless_current "New Pair", new_pair_path %>
+      </section> 
+
+      <section class="utility">
+        <% if session[:current_user_id] %>
+        You are logged in as: <%= @current_user.email %> | <a href="/logout">Logout</a>
+        <% else %>
+        <%= link_to_unless_current "Login", login_path %> | 
+        <%= link_to_unless_current "Register", register_path %> 
+        <% end %>
+      </section>
+    </nav>
+    
     <%= yield %>
   </body>
 </html>
